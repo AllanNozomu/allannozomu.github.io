@@ -1,0 +1,83 @@
+/*
+  elm-hot creates an additional div wrapper around the app to make HMR possible.
+  This could break styling in development mode if you are using Elm UI.
+
+  More context in the issue:
+    https://github.com/halfzebra/create-elm-app/issues/320
+*/
+[data-elm-hot="true"] {
+  height: inherit;
+}
+
+html, body {
+  height:100%;
+  font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  text-align: center;
+  color: #eeeeee;
+  background-color: #2e2e2e;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 200px;
+}
+
+#container {
+  display: flex;
+  height: inherit;
+}
+
+#leftMenu {
+  width: 96px;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+#leftMenu > #upperMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 3;
+}
+
+#leftMenu > #lowerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 2;
+}
+
+.item{
+  width: 64px;
+  height: 64px;
+  display: inline-block; 
+  transition: all 0.1s linear;
+}
+
+.item:hover{
+  cursor: pointer;
+  filter: brightness(50%);
+  transform: scale(1.1); 
+  transform-origin: center;
+}
+#containerBody { 
+  flex-grow: 1;
+  text-align: left;
+  padding: 2rem;
+}
+
+#footer {
+  height: 32px;
+}
+
+.item + .item { 
+  margin-left: 2%; 
+}
