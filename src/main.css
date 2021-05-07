@@ -15,16 +15,13 @@ html, body {
   margin: 0;
   text-align: center;
   color: #eeeeee;
-  background-color: #2e2e2e;
+  background-color: #222222;
 }
 
-h1 {
-  font-size: 2em;
-}
 
-img {
-  margin: 20px 0;
-  max-width: 200px;
+a {
+  text-decoration: none;
+  color: inherit; 
 }
 
 #container {
@@ -68,16 +65,9 @@ img {
   transform: scale(1.1); 
   transform-origin: center;
 }
+
 #containerBody { 
   flex-grow: 1;
   text-align: left;
   padding: 2rem;
-}
-
-#footer {
-  height: 32px;
-}
-
-.item + .item { 
-  margin-left: 2%; 
 }

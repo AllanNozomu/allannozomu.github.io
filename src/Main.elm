@@ -1,8 +1,8 @@
 module Main exposing (..)
 
 import Browser
-import Html exposing (Html, div, h1, img, text)
-import Html.Attributes exposing (class, id, src)
+import Html exposing (Html, a, div, h1, img, text)
+import Html.Attributes exposing (class, href, id, src, title)
 import Icons
 
 
@@ -48,14 +48,17 @@ leftMenu : Model -> Html Msg
 leftMenu model =
     div [ id "leftMenu" ]
         [ div [ id "upperMenu" ]
-            [ div [ class "item" ] [ Icons.home ]
-            , div [ class "item" ] [ Icons.code ]
-            , div [ class "item" ] [ Icons.tool ]
-            , div [ class "item" ] [ Icons.penTool ]
+            [ div [ class "item", title "Home" ] [ Icons.home ]
+            , div [ class "item", title "Projects" ] [ Icons.code ]
+            , div [ class "item", title "Blog" ] [ Icons.penTool ]
             ]
-        ,div [ id "lowerMenu" ]
-            [ div [ class "item" ] [ Icons.github ]
-            , div [ class "item" ] [ Icons.linkedin ]
+        , div [ id "lowerMenu" ]
+            [ div [ class "item", title "Github" ]
+                [ a [ href "https://github.com/allannozomu" ] [ Icons.github ]
+                ]
+            , div [ class "item", title "Linkedin" ]
+                [ a [ href "https://www.linkedin.com/in/allan-nozomu/" ] [ Icons.linkedin ]
+                ]
             ]
         ]
 
@@ -64,13 +67,6 @@ containerBody : Model -> Html Msg
 containerBody model =
     div [ id "containerBody" ]
         [ h1 [] [ text "Hello World" ]
-        ]
-
-
-footer : Model -> Html Msg
-footer model =
-    div [ id "footer" ]
-        [ text "Made by Allannozomu"
         ]
 
 
