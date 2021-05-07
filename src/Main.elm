@@ -1,8 +1,8 @@
 module Main exposing (..)
 
 import Browser
-import Html exposing (Html, a, div, h1, img, text)
-import Html.Attributes exposing (class, href, id, src, title)
+import Html exposing (Html, a, div, h1, img, p, text, span)
+import Html.Attributes exposing (class, href, id, src, title, target)
 import Icons
 
 
@@ -54,10 +54,10 @@ leftMenu model =
             ]
         , div [ id "lowerMenu" ]
             [ div [ class "item", title "Github" ]
-                [ a [ href "https://github.com/allannozomu" ] [ Icons.github ]
+                [ a [ href "https://github.com/allannozomu", target "#" ] [ Icons.github ]
                 ]
             , div [ class "item", title "Linkedin" ]
-                [ a [ href "https://www.linkedin.com/in/allan-nozomu/" ] [ Icons.linkedin ]
+                [ a [ href "https://www.linkedin.com/in/allan-nozomu/", target "#" ] [ Icons.linkedin ]
                 ]
             ]
         ]
@@ -66,7 +66,11 @@ leftMenu model =
 containerBody : Model -> Html Msg
 containerBody model =
     div [ id "containerBody" ]
-        [ h1 [] [ text "Hello World" ]
+        [ h1 [ class "title" ] [ text "Hello World," ]
+        , h1 [ class "title" ]
+            [ text "My name is Allan Nozomu" ]
+        , h1 [ class "title" ]
+            [ text "I'm a ", span[class "titleBlink"][text "|"] ]
         ]
 
 
