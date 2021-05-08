@@ -7,6 +7,7 @@
   "vendors~main.js": "/static/js/vendors~main.0b49ec49.chunk.js",
   "vendors~main.js.map": "/static/js/vendors~main.0b49ec49.chunk.js.map",
   "./service-worker.js": "/./service-worker.js",
+  "CNAME": "/CNAME",
   "favicon.ico": "/favicon.ico",
   "fonts/BebasNeue/BebasNeue-Regular.woff2": "/fonts/BebasNeue/BebasNeue-Regular.woff2",
   "fonts/BebasNeue/OFL.txt": "/fonts/BebasNeue/OFL.txt",
@@ -37,6 +38,6 @@
   "logo192.png": "/logo192.png",
   "logo512.png": "/logo512.png",
   "manifest.json": "/manifest.json",
-  "precache-manifest.fd1414fc2fc06870adec4cc22805f7ce.js": "/precache-manifest.fd1414fc2fc06870adec4cc22805f7ce.js",
+  "precache-manifest.01ccef2efc9604b3dc3f19faab2af5c6.js": "/precache-manifest.01ccef2efc9604b3dc3f19faab2af5c6.js",
   "static/media/main.css": "/static/media/RobotoMono-VariableFont_wght.2ccde177.ttf"
 }

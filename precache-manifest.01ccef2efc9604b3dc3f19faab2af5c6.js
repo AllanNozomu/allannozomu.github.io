@@ -1,5 +1,9 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "589f0b68a549ae1b5925d12507d7f7c5",
+    "url": "/CNAME"
+  },
+  {
     "revision": "56a2a0a8f1a1e9836e2170f0ed447e18",
     "url": "/favicon.ico"
   },
