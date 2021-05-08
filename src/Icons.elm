@@ -5,6 +5,7 @@ module Icons exposing
     , linkedin
     , penTool
     , tool
+    , smile
     )
 
 import Html exposing (Html)
@@ -17,13 +18,13 @@ svgFeatherIcon className =
     svg
         [ class <| "feather feather-" ++ className
         , fill "none"
-        , height "40"
+        , height "36"
         , stroke "currentColor"
         , strokeLinecap "round"
         , strokeLinejoin "round"
         , strokeWidth "1"
         , viewBox "0 0 24 24"
-        , width "40"
+        , width "36"
         ]
 
 
@@ -73,4 +74,13 @@ tool : Html msg
 tool =
     svgFeatherIcon "tool"
         [ Svg.path [ d "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" ] []
+        ]
+
+smile : Html msg
+smile =
+    svgFeatherIcon "smile"
+        [ Svg.circle [ cx "12", cy "12", r "10" ] []
+        , Svg.path [ d "M8 14s1.5 2 4 2 4-2 4-2" ] []
+        , Svg.line [ x1 "9", y1 "9", x2 "9.01", y2 "9" ] []
+        , Svg.line [ x1 "15", y1 "9", x2 "15.01", y2 "9" ] []
         ]

@@ -136,6 +136,12 @@ leftMenu model =
                 , onClick <| ChangePage "My Blog (WIP)"
                 ]
                 [ Icons.penTool ]
+            , div
+                [ class "item"
+                , title "Me"
+                , onClick <| ChangePage "My bio (WIP)"
+                ]
+                [ Icons.smile ]
             ]
         , div [ id "lowerMenu" ]
             [ div [ class "item", title "Github" ]
