@@ -76,11 +76,12 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   flex-grow: 2;
+  margin-bottom: 32px;
 }
 
 .item{
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   display: inline-block; 
   transition: all 0.1s linear;
 }
@@ -88,7 +89,7 @@ a {
 .item:hover{
   cursor: pointer;
   filter: brightness(50%);
-  transform: scale(1.1); 
+  transform: scale(1.05); 
   transform-origin: center;
 }
 
