@@ -47,7 +47,7 @@ subscriptions model =
         Sub.none
 
     else
-        Time.every 25 Tick
+        Time.every 20 Tick
 
 
 
@@ -139,7 +139,7 @@ leftMenu model =
             , div
                 [ class "item"
                 , title "Me"
-                , onClick <| ChangePage "My bio (WIP)"
+                , onClick <| ChangePage "My Bio (WIP)"
                 ]
                 [ Icons.smile ]
             ]
