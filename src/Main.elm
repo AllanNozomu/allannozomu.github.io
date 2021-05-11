@@ -177,9 +177,11 @@ containerBody model =
 
 content : Model -> Html Msg
 content model = 
-    case model.currentHeader of
-        "My Blog (WIP)" -> div[class "fadein"][markdownContent]
-        _ -> div[class "fadeout"][markdownContent]
+    case (model.currentHeader, model.nextHeader, model.writingStatus) of
+        ("My Blog (WIP)", _, Clearing) -> div[class "fadeout"][markdownContent]
+        (_, "My Blog (WIP)", Writing) -> div[class "fadein"][markdownContent]
+        (_, "My Blog (WIP)", Pause) -> div[class "fadein"][markdownContent]
+        _ -> div[class "fadeout"][]
 
 myOptions : Options
 myOptions =

@@ -99,7 +99,7 @@ html, body {
 }
 
 #contentWrapper {
-  width : 1024px;
+  max-width : 1024px;
   margin-top: 3rem;
 }
 
@@ -159,6 +159,20 @@ blockquote:before {
   color: #00adb5;
 }
 
+@media only screen and (max-width: 640px) {
+  blockquote:before {
+    font-size: 2rem;
+    line-height: 2rem;
+    vertical-align: 0;
+  }
+
+  blockquote {
+    border-left: 4px solid #00adb5;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
 blockquote p {
   display: inline;
 }
@@ -177,6 +191,10 @@ blockquote h6:before {
   color: #00adb5;
 }
 
+a {
+  color: inherit;
+}
+
 .markdownContent pre {
   background-color: #222831;
   padding: 1rem;
@@ -185,11 +203,11 @@ blockquote h6:before {
 .fadein {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.5s linear;
+  transition: opacity 0.25s linear;
 }
 
 .fadeout {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 0.25s, opacity 0.25s linear;
+  transition: visibility 0s 0.125s, opacity 0.125s linear;
 }
