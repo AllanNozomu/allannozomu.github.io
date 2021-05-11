@@ -10,28 +10,15 @@
   height: inherit;
 }
 
-@font-face {
-  font-family: 'BebasNeue';
-  src: url('/public/fonts/BebasNeue/BebasNeue-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'RobotoMono';
-  src: url('/public/fonts/RobotoMono/RobotoMono-VariableFont_wght.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Cardo&family=Roboto+Mono:ital@0;1&display=swap');
 
 html, body {
   height: 100%;
-  font-family: 'RobotoMono';
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   text-align: center;
   color: #eeeeee;
   background-color: #393e46;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .title {
@@ -101,11 +88,34 @@ a {
   text-align: left;
   padding: 3rem;
   margin-left: 64px;
+  width: 100%;
+}
+
+#contentBody {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contentWrapper {
+  width : 1024px;
+  margin-top: 3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #00adb5;
 }
 
 pre {
   white-space: pre-wrap;
   word-break: keep-all;
+  font-family: 'Roboto Mono';
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -119,4 +129,67 @@ pre {
   .title {
     font-size: 1.5rem;
   }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+blockquote {
+  background: #222831;
+  border-left: 8px solid #00adb5;
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  display: block;
+  font-size: 1.05rem;
+  padding: 1.333rem;
+  quotes: "“" "”" "“" "”";
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 5rem;
+  top: 1rem;
+  line-height: 1.5rem;
+  vertical-align: -1.5rem;
+  color: #00adb5;
+}
+
+blockquote p {
+  display: inline;
+}
+
+blockquote h6 {
+  margin: 0.5rem 0rem 0rem 0rem;
+	text-align: right;
+	padding-right: 1rem;
+}
+
+blockquote h6:before {
+  content: "- ";
+}
+
+.markdownContent a {
+  color: #00adb5;
+}
+
+.markdownContent pre {
+  background-color: #222831;
+  padding: 1rem;
+}
+
+.fadein {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.fadeout {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.25s, opacity 0.25s linear;
 }
